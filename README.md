@@ -46,8 +46,28 @@ Passerelle par défaut : `10.33.3.253`
    + *Ouvrir les paramètres Réseau et Internet*
 + Clic gauche sur *Centre Réseau et Partage*
 + Clic gauche sur *Modifier les paramètres de la carte*
-   + Clic droit sur le réseau souhaité (*Ici c'est WIFI@YNOV)
+   + Clic droit sur le réseau souhaité (Ici c'est *WIFI@YNOV*)
    + Clic gauche sur *Statut*
    + Clicl gauche sur *Détail*
+
+**Nmap :**
+
+Aprés l'installation de Nmap, j'ai tapé la commande `nmap -sn -PE 10.33.0.0/22`
+
+>Nmap done: 1024 IP addresses (378 hosts up) scanned in 52.79 seconds
+
+`MAC Address: 44:03:2C:2C:BD:5C (Intel Corporate)`
+
+`Nmap scan report for 10.33.3.239`
+
+`Host is up (0.091s latency).`
+
+`MAC Address: F4:BF:80:C0:A5:8A (Unknown)`
+
+`Nmap scan report for 10.33.3.242`
+
+On remarque qu'il y a des adresses IP disponibles entre `10.33.3.239` et `10.33.3.242`.
+
+Par exemple, `10.33.3.240` est libre. On peut donc s'attribuer cette adresse IP en utilisant la méthode graphique expliquée ci-dessus.
 
 ## II. Exploration locale en duo
