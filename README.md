@@ -50,6 +50,15 @@ Passerelle par défaut : `10.33.3.253`
    + Clic gauche sur *Statut*
    + Clicl gauche sur *Détail*
 
+**A quoi sert la gateway dans le réseau d'Ingésup ?**
+
+Le gateway est l'adresse qui permet de communiquer avec internet.
+
+**Calculez la première et la dernière IP disponibles du réseau :**
+
+La première adresse IP disponible est `10.33.3.1`
+La dernière adresse IP disponible est `10.33.3.255`
+
 **Nmap :**
 
 Aprés l'installation de Nmap, j'ai tapé la commande `nmap -sn -PE 10.33.0.0/22`
@@ -71,3 +80,35 @@ On remarque qu'il y a des adresses IP disponibles entre `10.33.3.239` et `10.33.
 Par exemple, `10.33.3.240` est libre. On peut donc s'attribuer cette adresse IP en utilisant la méthode graphique expliquée ci-dessus.
 
 ## II. Exploration locale en duo
+
+### 1. Prérequis 
++ On a un cable RJ45
++ On a deux PC
++ On a désactivé nos deux firewalls
+
+### 2. Cablâge
+
+C'est fait, branché via le port Ethernet à nos cartes Ethernet
+
+### 3. Modification d'adresse IP
+
+Nous avons tout deux modifié l'adresse IP de notre carte Ethernet
+
+Adresse IP de Thibault : 10.0.0.2
+Adresse IP de MAxime : 10.0.0.3 
+Masque de sous-réseau : `255.255.255.0`
+
+**Test avec le ping :**
+
+`PS C:\Users\Thibault> ping 10.0.0.3
+
+Envoi d’une requête 'Ping'  10.0.0.3 avec 32 octets de données :
+Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+
+Statistiques Ping pour 10.0.0.3:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms`
