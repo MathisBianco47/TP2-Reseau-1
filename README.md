@@ -17,7 +17,7 @@ J'ouvre le Powershell et je lance la commande `ipconfig /all`
 | ------------- |-------------|----------------|
 | Masque de sous-réseau      | 255.255.252.0 | 11111111.11111111.11111100.00000000|
 | Adresse MAC      | 20-16-B9-E9-7D-E8      ||
-| Adresse IP (IPv4) | 10.33.2.92(préféré)      | 00001010.00100001.00000010.01011100 |
+| Adresse IP (IPv4) | 10.33.2.92 (préféré)      | 00001010.00100001.00000010.01011100 |
 
 
 | NOM         | Carte Ethernet Ethernet |
