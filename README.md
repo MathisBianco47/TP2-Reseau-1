@@ -81,24 +81,34 @@ Par exemple, `10.33.3.240` est libre. On peut donc s'attribuer cette adresse IP 
 
 ## II. Exploration locale en duo
 
-### 1. Prérequis 
+### 1. Prérequis
+
+
 + On a un cable RJ45
 + On a deux PC
 + On a désactivé nos deux firewalls
 
+
 ### 2. Cablâge
+
 
 C'est fait, branché via le port Ethernet à nos cartes Ethernet
 
+
 ### 3. Modification d'adresse IP
+
 
 Nous avons tout deux modifié l'adresse IP de notre carte Ethernet
 
-Adresse IP de Thibault : 10.0.0.2
-Adresse IP de MAxime : 10.0.0.3 
+Adresse IP de Thibault : `10.0.0.2`
+
+Adresse IP de Maxime : `10.0.0.3`
+
 Masque de sous-réseau : `255.255.255.0`
 
+
 **Test avec le ping :**
+
 
 `PS C:\Users\Thibault> ping 10.0.0.3
 
@@ -109,6 +119,28 @@ Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
 Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
 
 Statistiques Ping pour 10.0.0.3:
-    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
 Durée approximative des boucles en millisecondes :
-    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms`
+Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms`
+
+A FAIRE : testez avec un /20, puis un /24, puis le plus petit réseau que vous trouvez. Inventez un nouveau réseau ! Comme 172.16.18.0/24 par exemple !
+
+### 4. Utilisation d'un des deux comme gateway
+
+Maxime désactive sa Wifi et n'a plus accès à internet.
+
+J'active, sur ma carta Wifi le partage internet à ma carte ethernet afin de lui partager internet.
+Il renseigne manuellement une adresse IP : 192.168.137.8 et utilise mon IP comme passerelle : 192.168.137.1
+Il renseigne les DNS de Google 8.8.8.8
+
+Le ping fonctionne
+PS C:\Users\Thibault> ping 192.168.137.8
+
+Envoi d’une requête 'Ping'  192.168.137.8 avec 32 octets de données :
+Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+
+Il a internet !!!
+
