@@ -49,3 +49,5 @@ Passerelle par défaut : `10.33.3.253`
    + Clic droit sur le réseau souhaité (*Ici c'est WIFI@YNOV)
    + Clic gauche sur *Statut*
    + Clicl gauche sur *Détail*
+
+## II. Exploration locale en duo
