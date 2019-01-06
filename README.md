@@ -144,3 +144,113 @@ Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 
 Il a internet !!!
 
+### 5. Petit chat privé
+
+Notons qu'à partir d'ici, la suite des tests et du TP a été réalisé sur un Windows, un Fedora mais aussi sur un Mac.
+
+Le PC sous Fedora de Maxime a servit de PC serveur avec pour adresse IP : `192.168.1.36`
+
+Le PC sous Mac de Maxime a servit de PC client.
+
+L'avantage de ces deux OS est que nous n'avions pas besoin d'installer Netcat.
+
+Pour se mettre en PC serveur, Maxime a tapé la commande `nc -l -p 8888`
+Pour se connecter au PC serveur de Maxime, j'ai tapé, sur son mac la commande `nc 192.168.1.36 8888`
+
+AFFICHER SCREEN
+
+### 6. Wireshark
+
+On ne comprends pas tout sur Wireshark mais voilà un screen de Wireshark sur mac, écoutant uniquement les communications ayant pour protocole TCP et nous avons réussi à répérer deux communications entre le mac et le système sous fedora.
+
+AFFICHER SCREEN
+
+### 7. Firewall
+
+NOTHING
+
+## II. Exploration locale en duo
+
+### DHCP 
+
+Pour savoir ça il faut aller dans l'invite de commande ou le Powershell et taper `ipconfig /all`
+
+`Serveur DHCP : 10.33.3.254`
+
+Avec cette commande, on peut aussi obtenir la durée de vite du bail DHCP.
+
+A FAIRE A YNOV
+
+**Ce que nous avons compris du DHCP**
+
+Après nos recherches, nous savons que le DHCP signifie Dynamic Host Configuration Protocol ou en français le protocole de configuration automatiques des hôtes.
+
+Il est chargé de la configuration automatique des adresses IP d'un réseau informatique. Cela évite à l'utilisateur de tout paramétrer lui-même.
+
+**Demandez une nouvelle adresse IP**
+
+Toujours dans notre invité de commande ou dans le terminal, on tape la commande `ipconfig /renew`
+
+### DNS
+
+Toujours avec la commande `ipconfig /all`
+
+`Serveur DNS : 10.33.10.20`
+
+**Nslookup**
+
+(Fait sur le réseau de Maxime)
+
+PS C:\Users\Thibault> nslookup google.com
+Serveur :   bbox.lan
+Address:  192.168.1.254
+
+Réponse ne faisant pas autorité :
+Nom :    google.com
+Addresses:  2a00:1450:4007:80a::200e
+          172.217.18.206
+
+PS C:\Users\Thibault> nslookup ynov.com
+Serveur :   bbox.lan
+Address:  192.168.1.254
+
+Réponse ne faisant pas autorité :
+Nom :    ynov.com
+Address:  217.70.184.38
+
+Un DNS signifie Domain Name System, c'est ce qui attribue une adresse IP à un nom de domaine.
+
+Ici nous voyons que le nom de domaine ynov.com est lié à l'adresse IP `217.70.184.38`
+
+**Reverse lookup**
+
+PS C:\Users\Thibault> nslookup 78.78.21.21
+Serveur :   bbox.lan
+Address:  192.168.1.254
+
+Nom :    host-78-78-21-21.mobileonline.telia.com
+Address:  78.78.21.21
+
+PS C:\Users\Thibault> nslookup 92.16.54.88
+Serveur :   bbox.lan
+Address:  192.168.1.254
+
+Nom :    host-92-16-54-88.as13285.net
+Address:  92.16.54.88
+
+### 3. Bonus
+
+**se renseigner sur les différences entre WiFi et câble**
+
+La WiFi n'a besoin que de deux cartes WiFi pour fonctionner alors que pour Ethernet il faut deux cartes Ethernet.
+Le câble a un meilleur débit que la Wifi car il y a très peu de perte.
+
+**explorer l'interface d'administration de votre box (chez vous) avec tout ça en tête**
+
+C'est fait via celle de Bouygues Telecom. L'interface est accessible via l'adresse 192.168.1.254, on y retrouve pleins de notions vues pendant les cours tel que l'IP, la Wifi, les ip locales, etc.
+
+**sinon, elle sert à quoi la MAC si on a des IP ? => Se renseigner sur ARP**
+
+Une adresse IP est attribuée en fonction du réseau et peut changer alors que l'adresse MAC est physique en fonction de la carte réseau. Autrement dit, l'adresse IP change en fonction des réseaux et l'adresse MAC reste la même.
+
+Nous n'avons pas de switch.
