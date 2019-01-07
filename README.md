@@ -160,7 +160,6 @@ Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 ```
 
-
 Il a internet !!!
 
 ---
@@ -178,7 +177,8 @@ L'avantage de ces deux OS est que nous n'avions pas besoin d'installer Netcat.
 Pour se mettre en PC serveur, Maxime a tapé la commande `nc -l -p 8888`
 Pour se connecter au PC serveur de Maxime, j'ai tapé, sur son mac la commande `nc 192.168.1.36 8888`
 
-AFFICHER SCREEN
+Maxime Larrieu : 
+![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/maxime.jpg "Photo de Maxime")
 
 ---
 
