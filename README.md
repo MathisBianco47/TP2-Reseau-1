@@ -123,7 +123,7 @@ Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
 ```
 
 
-Statistiques Ping pour 10.0.0.3:
+Statistiques Ping pour 10.0.0.3 :
 
 ```
 Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
@@ -132,13 +132,11 @@ Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 ```
 
 
-A FAIRE : testez avec un /20, puis un /24, puis le plus petit réseau que vous trouvez. Inventez un nouveau réseau ! Comme 172.16.18.0/24 par exemple !
-
 ### 4. Utilisation d'un des deux comme gateway
 
 Maxime désactive sa Wifi et n'a plus accès à internet.
 
-J'active, sur ma carta Wifi le partage internet à ma carte ethernet afin de lui partager internet.
+J'active, sur ma carte Wifi le partage internet à ma carte ethernet afin de lui partager internet.
 Il renseigne manuellement une adresse IP : 192.168.137.8 et utilise mon IP comme passerelle : 192.168.137.1
 Il renseigne les DNS de Google 8.8.8.8
 
@@ -181,7 +179,7 @@ AFFICHER SCREEN
 
 NOTHING
 
-## II. Exploration locale en duo
+## III. Manipulation d'autres outils/protocoles côté client
 
 ### DHCP 
 
@@ -249,7 +247,8 @@ Address:  217.70.184.38
 
 Un DNS signifie Domain Name System, c'est ce qui attribue une adresse IP à un nom de domaine.
 
-Ici nous voyons que le nom de domaine ynov.com est lié à l'adresse IP `217.70.184.38`
+Ici nous voyons que le nom de domaine ynov.com est lié à l'adresse IP `217.70.184.38`.
+Et le nom de domaine google.com est lié à l'adresse IP `172.217.18.206`.
 
 **Reverse lookup**
 
@@ -273,6 +272,7 @@ Nom :    host-92-16-54-88.as13285.net
 Address:  92.16.54.88
 ```
 
+C'est la même chose que pour le lookup mais dans l'autre sens. C'est-à-dire que `78.78.21.21` est lié au nom de domaine host-78-78-21-21.mobileonline.telia.com
 
 ### 3. Bonus
 
