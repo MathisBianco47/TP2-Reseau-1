@@ -70,13 +70,12 @@ La dernière adresse IP disponible est `10.33.3.255`
 
 Aprés l'installation de Nmap, j'ai tapé la commande `nmap -sn -PE 10.33.0.0/22`
 
->Nmap done: 1024 IP addresses (378 hosts up) scanned in 52.79 seconds
-
-`MAC Address: 44:03:2C:2C:BD:5C (Intel Corporate)`
-`Nmap scan report for 10.33.3.239`
-`Host is up (0.091s latency).`
-`MAC Address: F4:BF:80:C0:A5:8A (Unknown)`
-`Nmap scan report for 10.33.3.242`
+   >Nmap done: 1024 IP addresses (378 hosts up) scanned in 52.79 seconds
+   MAC Address: 44:03:2C:2C:BD:5C (Intel Corporate)
+   Nmap scan report for 10.33.3.239
+   Host is up (0.091s latency).
+   MAC Address: F4:BF:80:C0:A5:8A (Unknown)
+   Nmap scan report for 10.33.3.242
 
 On remarque qu'il y a des adresses IP disponibles entre `10.33.3.239` et `10.33.3.242`.
 
@@ -113,18 +112,25 @@ Masque de sous-réseau : `255.255.255.0`
 **Test avec le ping :**
 
 
-`PS C:\Users\Thibault> ping 10.0.0.3
+   PS C:\Users\Thibault> ping 10.0.0.3
 
-Envoi d’une requête 'Ping'  10.0.0.3 avec 32 octets de données :
-Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
-Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
-Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
-Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+   Envoi d’une requête 'Ping'  10.0.0.3 avec 32 octets de données :
+
+   Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+
+   Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+
+   Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
+
+   Réponse de 10.0.0.3 : octets=32 temps<1ms TTL=64
 
 Statistiques Ping pour 10.0.0.3:
-Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
-Durée approximative des boucles en millisecondes :
-Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms`
+
+   Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+
+   Durée approximative des boucles en millisecondes :
+
+   Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 
 A FAIRE : testez avec un /20, puis un /24, puis le plus petit réseau que vous trouvez. Inventez un nouveau réseau ! Comme 172.16.18.0/24 par exemple !
 
@@ -136,14 +142,19 @@ J'active, sur ma carta Wifi le partage internet à ma carte ethernet afin de lui
 Il renseigne manuellement une adresse IP : 192.168.137.8 et utilise mon IP comme passerelle : 192.168.137.1
 Il renseigne les DNS de Google 8.8.8.8
 
-Le ping fonctionne
-PS C:\Users\Thibault> ping 192.168.137.8
+Le ping fonctionne :
 
-`Envoi d’une requête 'Ping'  192.168.137.8 avec 32 octets de données :
-Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
-Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
-Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
-Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64`
+   PS C:\Users\Thibault> ping 192.168.137.8
+
+   Envoi d’une requête 'Ping'  192.168.137.8 avec 32 octets de données :
+
+   Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+
+   Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+
+   Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+
+   Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 
 Il a internet !!!
 
@@ -176,53 +187,61 @@ NOTHING
 
 ### DHCP 
 
+
 Pour savoir ça il faut aller dans l'invite de commande ou le Powershell et taper `ipconfig /all`
 
 `Serveur DHCP . . . . . . . . . . . . . : 10.33.3.254`
 
 Avec cette commande, on peut aussi obtenir la durée de vite du bail DHCP.
 
-`Bail obtenu. . . . . . . . . . . . . . : lundi 7 janvier 2019 09:00:39`
-`Bail expirant. . . . . . . . . . . . . : lundi 7 janvier 2019 10:30:38`
+   Bail obtenu. . . . . . . . . . . . . . : lundi 7 janvier 2019 09:00:39
 
-A FAIRE A YNOV
+   Bail expirant. . . . . . . . . . . . . : lundi 7 janvier 2019 10:30:38
+
 
 **Ce que nous avons compris du DHCP**
+
 
 Après nos recherches, nous savons que le DHCP signifie Dynamic Host Configuration Protocol ou en français le protocole de configuration automatiques des hôtes.
 
 Il est chargé de la configuration automatique des adresses IP d'un réseau informatique. Cela évite à l'utilisateur de tout paramétrer lui-même.
 
+
 **Demandez une nouvelle adresse IP**
+
 
 Toujours dans notre invité de commande ou dans le terminal, on tape la commande `ipconfig /renew`
 
+
 ### DNS
+
 
 Toujours avec la commande `ipconfig /all`
 
 `Serveur DNS : 10.33.10.20`
 
+
 **Nslookup**
 
 (Fait sur le réseau de Maxime)
 
-PS C:\Users\Thibault> nslookup google.com
-Serveur :   bbox.lan
-Address:  192.168.1.254
+   PS C:\Users\Thibault> nslookup google.com`
+   Serveur :   bbox.lan
+   Address:  192.168.1.254
 
-Réponse ne faisant pas autorité :
-Nom :    google.com
-Addresses:  2a00:1450:4007:80a::200e
-          172.217.18.206
+   Réponse ne faisant pas autorité :
+   Nom :    google.com
+   Addresses:  2a00:1450:4007:80a::200e
+            172.217.18.206
 
-PS C:\Users\Thibault> nslookup ynov.com
-Serveur :   bbox.lan
-Address:  192.168.1.254
 
-Réponse ne faisant pas autorité :
-Nom :    ynov.com
-Address:  217.70.184.38
+   PS C:\Users\Thibault> nslookup ynov.com
+   Serveur :   bbox.lan
+   Address:  192.168.1.254
+
+   Réponse ne faisant pas autorité :
+   Nom :    ynov.com
+   Address:  217.70.184.38
 
 Un DNS signifie Domain Name System, c'est ce qui attribue une adresse IP à un nom de domaine.
 
@@ -230,19 +249,19 @@ Ici nous voyons que le nom de domaine ynov.com est lié à l'adresse IP `217.70.
 
 **Reverse lookup**
 
-PS C:\Users\Thibault> nslookup 78.78.21.21
-Serveur :   bbox.lan
-Address:  192.168.1.254
+   PS C:\Users\Thibault> nslookup 78.78.21.21
+   Serveur :   bbox.lan
+   Address:  192.168.1.254
 
-Nom :    host-78-78-21-21.mobileonline.telia.com
-Address:  78.78.21.21
+   Nom :    host-78-78-21-21.mobileonline.telia.com
+   Address:  78.78.21.21
 
-PS C:\Users\Thibault> nslookup 92.16.54.88
-Serveur :   bbox.lan
-Address:  192.168.1.254
+   PS C:\Users\Thibault> nslookup 92.16.54.88
+   Serveur :   bbox.lan
+   Address:  192.168.1.254
 
-Nom :    host-92-16-54-88.as13285.net
-Address:  92.16.54.88
+   Nom :    host-92-16-54-88.as13285.net
+   Address:  92.16.54.88
 
 ### 3. Bonus
 
