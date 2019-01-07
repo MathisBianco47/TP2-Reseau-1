@@ -1,12 +1,12 @@
 # B1 Réseau 2018 - Thibault Feugère
 
 Maxime Larrieu : 
-![alt text](https://github.com/flamingfurry/TP2-Reseau/maxime.jpg "Photo de Maxime")
+![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/maxime.jpg "Photo de Maxime")
 
 Thibault Feugère : 
 ![alt text][logo]
 
-[logo]: https://github.com/flamingfurry/TP2-Reseau/thibault.png "Photo de Thibault"
+[logo]: https://github.com/flamingfurry/TP2-Reseau/blob/master/thibault.png "Photo de Thibault"
 
 ## I. Exploration locale en solo
 
