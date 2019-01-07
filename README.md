@@ -1,5 +1,12 @@
 # B1 Réseau 2018 - Thibault Feugère
 
+Maxime Larrieu : 
+![alt text](https://github.com/flamingfurry/TP2-Reseau/maxime.jpg "Photo de Maxime")
+
+Thibault Feugère : 
+![alt text][logo]
+
+[logo]: https://github.com/flamingfurry/TP2-Reseau/thibault.png "Photo de Thibault"
 
 ## I. Exploration locale en solo
 
@@ -136,11 +143,11 @@ Il renseigne les DNS de Google 8.8.8.8
 Le ping fonctionne
 PS C:\Users\Thibault> ping 192.168.137.8
 
-Envoi d’une requête 'Ping'  192.168.137.8 avec 32 octets de données :
+`Envoi d’une requête 'Ping'  192.168.137.8 avec 32 octets de données :
 Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
 Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
-Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64
+Réponse de 192.168.137.8 : octets=32 temps<1ms TTL=64`
 
 Il a internet !!!
 
@@ -175,9 +182,12 @@ NOTHING
 
 Pour savoir ça il faut aller dans l'invite de commande ou le Powershell et taper `ipconfig /all`
 
-`Serveur DHCP : 10.33.3.254`
+`Serveur DHCP . . . . . . . . . . . . . : 10.33.3.254`
 
 Avec cette commande, on peut aussi obtenir la durée de vite du bail DHCP.
+
+`Bail obtenu. . . . . . . . . . . . . . : lundi 7 janvier 2019 09:00:39`
+`Bail expirant. . . . . . . . . . . . . : lundi 7 janvier 2019 10:30:38`
 
 A FAIRE A YNOV
 
