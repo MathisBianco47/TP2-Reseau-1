@@ -177,8 +177,13 @@ L'avantage de ces deux OS est que nous n'avions pas besoin d'installer Netcat.
 Pour se mettre en PC serveur, Maxime a tapé la commande `nc -l -p 8888`
 Pour se connecter au PC serveur de Maxime, j'ai tapé, sur son mac la commande `nc 192.168.1.36 8888`
 
-Maxime Larrieu : 
-![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/maxime.jpg "Photo de Maxime")
+![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/nc-sous-fedora.png "Photo de la conversation Netcat")
+
+Screenshot de la conversation Netcat sous Fedora, PC Serveur
+
+![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/screen_netcat_mac.png "Photo de la conversation Netcat")
+
+Screenshot de la conversation Netcat sous Mac, PC Client
 
 ---
 
@@ -187,6 +192,8 @@ Maxime Larrieu :
 On ne comprends pas tout sur Wireshark mais voilà un screen de Wireshark sur mac, écoutant uniquement les communications ayant pour protocole TCP et nous avons réussi à répérer deux communications entre le mac et le système sous fedora.
 
 ![alt text](https://github.com/flamingfurry/TP2-Reseau/blob/master/wireshark.png "Screenshot Wireshark")
+
+Screenshot Wireshark sur Mac en WiFi.
 
 ---
 
