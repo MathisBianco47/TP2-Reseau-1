@@ -70,24 +70,14 @@ La dernière adresse IP disponible est `10.33.3.255`
 
 Aprés l'installation de Nmap, j'ai tapé la commande `nmap -sn -PE 10.33.0.0/22`
 
-
-   Nmap done: 1024 IP addresses (378 hosts up) scanned in 52.79 seconds
-
-
-   MAC Address: 44:03:2C:2C:BD:5C (Intel Corporate)
-
-
-   Nmap scan report for 10.33.3.239
-
-
-   Host is up (0.091s latency).
-
-
-   MAC Address: F4:BF:80:C0:A5:8A (Unknown)
-
-
-   Nmap scan report for 10.33.3.242
-
+```
+Nmap done: 1024 IP addresses (378 hosts up) scanned in 52.79 seconds
+MAC Address: 44:03:2C:2C:BD:5C (Intel Corporate)
+Nmap scan report for 10.33.3.239
+Host is up (0.091s latency).
+MAC Address: F4:BF:80:C0:A5:8A (Unknown)
+Nmap scan report for 10.33.3.242
+```
 
 On remarque qu'il y a des adresses IP disponibles entre `10.33.3.239` et `10.33.3.242`.
 
